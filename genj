@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+#
+# genj - Java Project Generator
+# Wrapper script for simplified invocation
+#
+
+set -euo pipefail
+
+# Script directory (where the script is located)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# JAR file location
+JAR_NAME="genj-1.0.0.jar"
+JAR_PATH=""
+
+# Search for JAR in multiple locations
+if [[ -f "${SCRIPT_DIR}/target/${JAR_NAME}" ]]; then
+    JAR_PATH="${SCRIPT_DIR}/target/${JAR_NAME}"
+elif [[ -f "${SCRIPT_DIR}/${JAR_NAME}" ]]; then
+    JAR_PATH="${SCRIPT_DIR}/${JAR_NAME}"
+elif [[ -f "${HOME}/.local/lib/genj/${JAR_NAME}" ]]; then
+    JAR_PATH="${HOME}/.local/lib/genj/${JAR_NAME}"
+elif [[ -f "/usr/local/lib/genj/${JAR_NAME}" ]]; then
+    JAR_PATH="/usr/local/lib/genj/${JAR_NAME}"
+else
+    echo "Error: Cannot find ${JAR_NAME}" >&2
+    echo "Expected locations:" >&2
+    echo "  - ${SCRIPT_DIR}/target/${JAR_NAME}" >&2
+    echo "  - ${SCRIPT_DIR}/${JAR_NAME}" >&2
+    echo "  - ${HOME}/.local/lib/genj/${JAR_NAME}" >&2
+    echo "  - /usr/local/lib/genj/${JAR_NAME}" >&2
+    echo "" >&2
+    echo "Please run 'mvn package' in the GenJava directory first." >&2
+    exit 1
+fi
+
+# Templates directory
+TEMPLATES_DIR=""
+if [[ -d "${SCRIPT_DIR}/templates" ]]; then
+    TEMPLATES_DIR="${SCRIPT_DIR}/templates"
+elif [[ -d "${HOME}/.local/share/genj/templates" ]]; then
+    TEMPLATES_DIR="${HOME}/.local/share/genj/templates"
+elif [[ -d "/usr/local/share/genj/templates" ]]; then
+    TEMPLATES_DIR="/usr/local/share/genj/templates"
+fi
+
+# Export templates directory if found
+if [[ -n "${TEMPLATES_DIR}" ]]; then
+    export GENJ_TEMPLATES_DIR="${TEMPLATES_DIR}"
+fi
+
+# Java options (enable preview features for Java 25+)
+JAVA_OPTS="${JAVA_OPTS:-}"
+JAVA_OPTS="${JAVA_OPTS} --enable-preview"
+
+# Run GenJava
+exec java ${JAVA_OPTS} -jar "${JAR_PATH}" "$@"

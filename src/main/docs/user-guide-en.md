@@ -118,53 +118,53 @@ genj [MODE] [OPTIONS]
 
 ### Template Options
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--template` | `-t` | Path to template (ZIP file or directory) | *Required* |
-| `--destination` | `-d` | Output directory | `.` (current) |
+| Option          | Short | Description                              | Default       |
+| --------------- | ----- | ---------------------------------------- | ------------- |
+| `--template`    | `-t`  | Path to template (ZIP file or directory) | *Required*    |
+| `--destination` | `-d`  | Output directory                         | `.` (current) |
 
 ### Project Configuration
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--project_name` | `-n` | Name of the project | `Demo` |
-| `--author` | `-a` | Author name | `Unknown Author` |
-| `--email` | `-e` | Author email address | `email@unknown.local` |
-| `--project_version` | `-v` | Initial project version | `0.0.1` |
-| `--vendor_name` | `-l` | Vendor/organization name | `Vendor` |
+| Option              | Short | Description              | Default               |
+| ------------------- | ----- | ------------------------ | --------------------- |
+| `--project_name`    | `-n`  | Name of the project      | `Demo`                |
+| `--author`          | `-a`  | Author name              | `Unknown Author`      |
+| `--email`           | `-e`  | Author email address     | `email@unknown.local` |
+| `--project_version` | `-v`  | Initial project version  | `0.0.1`               |
+| `--vendor_name`     | `-l`  | Vendor/organization name | `Vendor`              |
 
 ### Java Configuration
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--java_version` | `-j` | Target JDK version | `25` |
-| `--java_flavor` | `-f` | SDKMAN Java distribution | `25-zulu` |
-| `--package` | `-k` | Java package name | `com.demo` |
-| `--mainclass` | `-m` | Main class name | `App` |
+| Option           | Short | Description              | Default    |
+| ---------------- | ----- | ------------------------ | ---------- |
+| `--java_version` | `-j`  | Target JDK version       | `25`       |
+| `--java_flavor`  | `-f`  | SDKMAN Java distribution | `25-zulu`  |
+| `--package`      | `-k`  | Java package name        | `com.demo` |
+| `--mainclass`    | `-m`  | Main class name          | `App`      |
 
 ### Build Tool Configuration
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--build` | `-b` | Build tool (`maven` or `gradle`) | `maven` |
-| `--maven_version` | - | Maven version for SDKMAN | `3.9.5` |
-| `--gradle_version` | - | Gradle version for SDKMAN | `8.5` |
+| Option             | Short | Description                      | Default |
+| ------------------ | ----- | -------------------------------- | ------- |
+| `--build`          | `-b`  | Build tool (`maven` or `gradle`) | `maven` |
+| `--maven_version`  | -     | Maven version for SDKMAN         | `3.9.5` |
+| `--gradle_version` | -     | Gradle version for SDKMAN        | `8.5`   |
 
 ### Git Configuration
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--remote_git_repository` | `-r` | Remote Git repository URL | *None* |
+| Option                    | Short | Description               | Default |
+| ------------------------- | ----- | ------------------------- | ------- |
+| `--remote_git_repository` | `-r`  | Remote Git repository URL | *None*  |
 
 ### Utility Options
 
-| Option | Short | Description |
-|--------|-------|-------------|
-| `--verbose` | - | Enable detailed output |
-| `--list` | - | List available templates |
-| `--search` | `-s` | Search templates by name/metadata |
-| `--help` | `-h` | Display help message |
-| `--version` | - | Show version information |
+| Option      | Short | Description                       |
+| ----------- | ----- | --------------------------------- |
+| `--verbose` | -     | Enable detailed output            |
+| `--list`    | -     | List available templates          |
+| `--search`  | `-s`  | Search templates by name/metadata |
+| `--help`    | `-h`  | Display help message              |
+| `--version` | -     | Show version information          |
 
 ---
 
@@ -272,17 +272,17 @@ template/
 
 The following placeholders are replaced during generation:
 
-| Placeholder | Description | Example |
-|-------------|-------------|---------|
-| `${PROJECT_NAME}` | Project name | `MyProject` |
-| `${AUTHOR_NAME}` | Author name | `John Doe` |
-| `${AUTHOR_EMAIL}` | Author email | `john@example.com` |
-| `${PROJECT_VERSION}` | Version | `1.0.0` |
-| `${PACKAGE}` | Java package (also creates directories) | `com.example` |
-| `${JAVA}` | Java version | `25` |
-| `${VENDOR_NAME}` | Vendor name | `MyCompany` |
-| `${MAINCLASS}` | Main class name | `App` |
-| `${PROJECT_YEAR}` | Current year | `2026` |
+| Placeholder          | Description                             | Example            |
+| -------------------- | --------------------------------------- | ------------------ |
+| `${PROJECT_NAME}`    | Project name                            | `MyProject`        |
+| `${AUTHOR_NAME}`     | Author name                             | `John Doe`         |
+| `${AUTHOR_EMAIL}`    | Author email                            | `john@example.com` |
+| `${PROJECT_VERSION}` | Version                                 | `1.0.0`            |
+| `${PACKAGE}`         | Java package (also creates directories) | `com.example`      |
+| `${JAVA}`            | Java version                            | `25`               |
+| `${VENDOR_NAME}`     | Vendor name                             | `MyCompany`        |
+| `${MAINCLASS}`       | Main class name                         | `App`              |
+| `${PROJECT_YEAR}`    | Current year                            | `2026`             |
 
 ### Package Placeholder Behavior
 
@@ -351,14 +351,14 @@ graph TD
 
 ### File Descriptions
 
-| File | Description |
-|------|-------------|
-| `pom.xml` / `build.gradle` | Build configuration |
-| `.sdkmanrc` | SDKMAN environment configuration |
-| `.genrc` | Generation metadata (JSON) |
-| `.vscode/settings.json` | VSCode project settings |
-| `.vscode/launch.json` | VSCode debug configuration |
-| `.git/` | Initialized Git repository |
+| File                       | Description                      |
+| -------------------------- | -------------------------------- |
+| `pom.xml` / `build.gradle` | Build configuration              |
+| `.sdkmanrc`                | SDKMAN environment configuration |
+| `.genrc`                   | Generation metadata (JSON)       |
+| `.vscode/settings.json`    | VSCode project settings          |
+| `.vscode/launch.json`      | VSCode debug configuration       |
+| `.git/`                    | Initialized Git repository       |
 
 ### Sample .genrc Content
 
@@ -425,12 +425,12 @@ sequenceDiagram
 
 ### Common Issues
 
-| Issue | Solution |
-|-------|----------|
-| `Template not found` | Check the template path exists |
-| `Unsupported build tool` | Use `maven` or `gradle` only |
-| `Git initialization failed` | Ensure Git is installed |
-| `Preview features required` | Add `--enable-preview` flag |
+| Issue                       | Solution                       |
+| --------------------------- | ------------------------------ |
+| `Template not found`        | Check the template path exists |
+| `Unsupported build tool`    | Use `maven` or `gradle` only   |
+| `Git initialization failed` | Ensure Git is installed        |
+| `Preview features required` | Add `--enable-preview` flag    |
 
 ### Verbose Mode
 
