@@ -11,6 +11,38 @@
 
     <name>genj</name>
     <description>Java Project Generator - Generates Java projects from templates</description>
+    <url>https://github.com/mcgivrer/genjava</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>mcgivrer</id>
+            <name>Frédéric Delorme</name>
+            <url>https://github.com/mcgivrer</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/mcgivrer/genjava.git</connection>
+        <developerConnection>scm:git:ssh://github.com:mcgivrer/genjava.git</developerConnection>
+        <url>https://github.com/mcgivrer/genjava</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub mcgivrer Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/mcgivrer/genjava</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
@@ -78,6 +110,31 @@
                                 </filter>
                             </filters>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Release plugin for GitHub releases -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <releaseProfiles>release</releaseProfiles>
+                </configuration>
+            </plugin>
+            <!-- Source plugin for attaching sources -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>

@@ -1,0 +1,14 @@
+[package]
+name = "${PROJECT_NAME}"
+version = "${PROJECT_VERSION}"
+edition = "2021"
+authors = ["${AUTHOR_NAME} <${AUTHOR_EMAIL}>"]
+description = "A simple Rust console application"
+license = "MIT"
+repository = "${REMOTE_GIT}"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true

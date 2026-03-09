@@ -1,0 +1,16 @@
+{
+  "name": "${PROJECT_NAME}-server",
+  "version": "${PROJECT_VERSION}",
+  "description": "API server for ${PROJECT_NAME}",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

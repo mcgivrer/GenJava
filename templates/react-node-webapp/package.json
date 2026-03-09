@@ -1,0 +1,18 @@
+{
+  "name": "${PROJECT_NAME}",
+  "version": "${PROJECT_VERSION}",
+  "description": "React + Node.js web application",
+  "author": "${AUTHOR_NAME} <${AUTHOR_EMAIL}>",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
