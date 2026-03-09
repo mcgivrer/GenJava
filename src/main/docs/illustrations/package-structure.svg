@@ -1,0 +1,49 @@
+<svg width="550" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="550" height="400" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="275" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Package Structure</text>
+  
+  <!-- Root package -->
+  <rect x="30" y="45" width="490" height="340" rx="8" fill="#ECEFF1" stroke="#90A4AE" stroke-width="2"/>
+  <text x="50" y="68" font-family="Courier New" font-size="12" font-weight="bold" fill="#455A64">com.genj</text>
+  
+  <!-- Entry Point -->
+  <rect x="50" y="85" width="200" height="35" rx="5" fill="#4CAF50"/>
+  <text x="60" y="107" font-family="Courier New" font-size="11" fill="white">Main.java</text>
+  <text x="170" y="107" font-family="Arial" font-size="9" fill="#C8E6C9">entry point</text>
+  
+  <!-- CLI Layer -->
+  <text x="50" y="145" font-family="Arial" font-size="11" font-weight="bold" fill="#1565C0">CLI Layer</text>
+  <rect x="50" y="155" width="200" height="30" rx="4" fill="#2196F3"/>
+  <text x="60" y="175" font-family="Courier New" font-size="10" fill="white">CliParser.java</text>
+  
+  <rect x="260" y="155" width="200" height="30" rx="4" fill="#2196F3"/>
+  <text x="270" y="175" font-family="Courier New" font-size="10" fill="white">CliConfig.java</text>
+  <text x="400" y="175" font-family="Arial" font-size="9" fill="#BBDEFB">record</text>
+  
+  <!-- Template Layer -->
+  <text x="50" y="210" font-family="Arial" font-size="11" font-weight="bold" fill="#E65100">Template Layer</text>
+  <rect x="50" y="220" width="200" height="30" rx="4" fill="#FF9800"/>
+  <text x="60" y="240" font-family="Courier New" font-size="10" fill="white">TemplateProcessor.java</text>
+  
+  <rect x="260" y="220" width="200" height="30" rx="4" fill="#FF9800"/>
+  <text x="270" y="240" font-family="Courier New" font-size="10" fill="white">TemplateLister.java</text>
+  
+  <!-- Generator Layer -->
+  <text x="50" y="275" font-family="Arial" font-size="11" font-weight="bold" fill="#AD1457">Generator Layer</text>
+  <rect x="50" y="285" width="200" height="30" rx="4" fill="#E91E63"/>
+  <text x="60" y="305" font-family="Courier New" font-size="10" fill="white">GenrcWriter.java</text>
+  
+  <rect x="260" y="285" width="200" height="30" rx="4" fill="#E91E63"/>
+  <text x="270" y="305" font-family="Courier New" font-size="10" fill="white">VscodeGitSetup.java</text>
+  
+  <!-- Utilities Layer -->
+  <text x="50" y="340" font-family="Arial" font-size="11" font-weight="bold" fill="#6A1B9A">Utilities</text>
+  <rect x="50" y="350" width="140" height="25" rx="4" fill="#9C27B0"/>
+  <text x="60" y="367" font-family="Courier New" font-size="10" fill="white">FileUtils.java</text>
+  
+  <rect x="200" y="350" width="100" height="25" rx="4" fill="#9C27B0"/>
+  <text x="210" y="367" font-family="Courier New" font-size="10" fill="white">Log.java</text>
+</svg>

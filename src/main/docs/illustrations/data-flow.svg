@@ -1,0 +1,67 @@
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="600" height="350" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="300" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Data Flow</text>
+  
+  <!-- CLI Input -->
+  <rect x="30" y="50" width="100" height="60" rx="8" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="80" y="75" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1565C0">CLI Args</text>
+  <text x="80" y="95" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">String[]</text>
+  
+  <!-- Arrow -->
+  <line x1="130" y1="80" x2="170" y2="80" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- CliParser -->
+  <rect x="180" y="50" width="100" height="60" rx="8" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+  <text x="230" y="75" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1565C0">CliParser</text>
+  <text x="230" y="95" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">parse()</text>
+  
+  <!-- Arrow -->
+  <line x1="280" y1="80" x2="320" y2="80" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- CliConfig -->
+  <rect x="330" y="50" width="100" height="60" rx="8" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="380" y="75" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2E7D32">CliConfig</text>
+  <text x="380" y="95" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">record</text>
+  
+  <!-- Arrow down -->
+  <line x1="380" y1="110" x2="380" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Template Source -->
+  <rect x="30" y="160" width="100" height="60" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="80" y="185" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#E65100">Template</text>
+  <text x="80" y="205" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">ZIP / Directory</text>
+  
+  <!-- Arrow -->
+  <line x1="130" y1="190" x2="170" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- TemplateProcessor -->
+  <rect x="180" y="160" width="130" height="60" rx="8" fill="#FFE0B2" stroke="#FF9800" stroke-width="2"/>
+  <text x="245" y="185" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#E65100">TemplateProcessor</text>
+  <text x="245" y="205" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">processTemplate()</text>
+  
+  <!-- Arrow -->
+  <line x1="310" y1="190" x2="350" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Replacements Map -->
+  <rect x="360" y="160" width="100" height="60" rx="8" fill="#E1BEE7" stroke="#9C27B0" stroke-width="2"/>
+  <text x="410" y="180" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#6A1B9A">Replacements</text>
+  <text x="410" y="200" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Map&lt;String,</text>
+  <text x="410" y="212" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">String&gt;</text>
+  
+  <!-- Arrow down from TemplateProcessor -->
+  <line x1="245" y1="220" x2="245" y2="260" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Output Project -->
+  <rect x="30" y="270" width="520" height="60" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="290" y="295" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2E7D32">Generated Project</text>
+  <text x="290" y="315" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Sources + pom.xml + .vscode + .git + .genrc + .sdkmanrc</text>
+</svg>

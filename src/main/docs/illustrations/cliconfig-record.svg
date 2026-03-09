@@ -1,0 +1,51 @@
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="recordGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E9"/>
+      <stop offset="100%" style="stop-color:#C8E6C9"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="500" height="300" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">CliConfig Record Structure</text>
+  
+  <!-- Record Box -->
+  <rect x="50" y="45" width="400" height="240" rx="10" fill="url(#recordGrad)" stroke="#4CAF50" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="50" y="45" width="400" height="30" rx="10" fill="#4CAF50"/>
+  <rect x="50" y="60" width="400" height="15" fill="#4CAF50"/>
+  <text x="250" y="67" text-anchor="middle" font-family="Courier New" font-size="12" font-weight="bold" fill="white">public record CliConfig(...)</text>
+  
+  <!-- Fields - Column 1 -->
+  <text x="70" y="100" font-family="Courier New" font-size="10" fill="#333">String template</text>
+  <text x="70" y="118" font-family="Courier New" font-size="10" fill="#333">String destination</text>
+  <text x="70" y="136" font-family="Courier New" font-size="10" fill="#333">String projectName</text>
+  <text x="70" y="154" font-family="Courier New" font-size="10" fill="#333">String author</text>
+  <text x="70" y="172" font-family="Courier New" font-size="10" fill="#333">String email</text>
+  <text x="70" y="190" font-family="Courier New" font-size="10" fill="#333">String projectVersion</text>
+  <text x="70" y="208" font-family="Courier New" font-size="10" fill="#333">String java</text>
+  <text x="70" y="226" font-family="Courier New" font-size="10" fill="#333">String javaFlavor</text>
+  <text x="70" y="244" font-family="Courier New" font-size="10" fill="#333">String packageName</text>
+  
+  <!-- Fields - Column 2 -->
+  <text x="270" y="100" font-family="Courier New" font-size="10" fill="#333">String mainclass</text>
+  <text x="270" y="118" font-family="Courier New" font-size="10" fill="#333">String buildTool</text>
+  <text x="270" y="136" font-family="Courier New" font-size="10" fill="#333">String mavenVersion</text>
+  <text x="270" y="154" font-family="Courier New" font-size="10" fill="#333">String gradleVersion</text>
+  <text x="270" y="172" font-family="Courier New" font-size="10" fill="#333">String vendorName</text>
+  <text x="270" y="190" font-family="Courier New" font-size="10" fill="#333">String remoteGit</text>
+  <text x="270" y="208" font-family="Courier New" font-size="10" fill="#666">boolean verbose</text>
+  <text x="270" y="226" font-family="Courier New" font-size="10" fill="#666">boolean list</text>
+  <text x="270" y="244" font-family="Courier New" font-size="10" fill="#333">String search</text>
+  
+  <!-- Divider -->
+  <line x1="255" y1="85" x2="255" y2="270" stroke="#A5D6A7" stroke-width="1" stroke-dasharray="4"/>
+  
+  <!-- Builder note -->
+  <rect x="50" y="255" width="400" height="25" rx="5" fill="#81C784"/>
+  <text x="250" y="272" text-anchor="middle" font-family="Arial" font-size="10" fill="white">+ Builder pattern for fluent construction</text>
+</svg>

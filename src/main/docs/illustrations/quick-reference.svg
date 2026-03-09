@@ -1,0 +1,48 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="header" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50"/>
+      <stop offset="100%" style="stop-color:#2196F3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Card background -->
+  <rect x="10" y="10" width="580" height="380" rx="10" fill="#fafafa" stroke="#ddd" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="10" y="10" width="580" height="40" rx="10" fill="url(#header)"/>
+  <rect x="10" y="35" width="580" height="15" fill="url(#header)"/>
+  <text x="300" y="35" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">genj Quick Reference</text>
+  
+  <!-- Section 1: Basic Commands -->
+  <text x="30" y="75" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Basic Commands</text>
+  <text x="30" y="95" font-family="Courier New" font-size="11" fill="#666">genj --help</text>
+  <text x="200" y="95" font-family="Arial" font-size="11" fill="#888">Show help</text>
+  <text x="30" y="112" font-family="Courier New" font-size="11" fill="#666">genj --list</text>
+  <text x="200" y="112" font-family="Arial" font-size="11" fill="#888">List templates</text>
+  <text x="30" y="129" font-family="Courier New" font-size="11" fill="#666">genj -s &lt;term&gt;</text>
+  <text x="200" y="129" font-family="Arial" font-size="11" fill="#888">Search templates</text>
+  
+  <!-- Section 2: Required Options -->
+  <text x="30" y="160" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Required Options</text>
+  <text x="30" y="180" font-family="Courier New" font-size="11" fill="#666">-t, --template</text>
+  <text x="200" y="180" font-family="Arial" font-size="11" fill="#888">Template path (ZIP or folder)</text>
+  
+  <!-- Section 3: Common Options -->
+  <text x="30" y="210" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Common Options</text>
+  <text x="30" y="230" font-family="Courier New" font-size="11" fill="#666">-n, --project_name</text>
+  <text x="200" y="230" font-family="Arial" font-size="11" fill="#888">Project name</text>
+  <text x="30" y="247" font-family="Courier New" font-size="11" fill="#666">-k, --package</text>
+  <text x="200" y="247" font-family="Arial" font-size="11" fill="#888">Java package</text>
+  <text x="30" y="264" font-family="Courier New" font-size="11" fill="#666">-d, --destination</text>
+  <text x="200" y="264" font-family="Arial" font-size="11" fill="#888">Output directory</text>
+  <text x="30" y="281" font-family="Courier New" font-size="11" fill="#666">-b, --build</text>
+  <text x="200" y="281" font-family="Arial" font-size="11" fill="#888">maven | gradle</text>
+  
+  <!-- Section 4: Example -->
+  <text x="30" y="315" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Example</text>
+  <rect x="30" y="325" width="540" height="50" rx="5" fill="#263238"/>
+  <text x="40" y="345" font-family="Courier New" font-size="11" fill="#4CAF50">$</text>
+  <text x="55" y="345" font-family="Courier New" font-size="11" fill="#fff">genj -t java-basic-game -n MyGame -k com.example</text>
+  <text x="55" y="365" font-family="Courier New" font-size="11" fill="#4CAF50">[✓] Java project 'MyGame' generated successfully</text>
+</svg>

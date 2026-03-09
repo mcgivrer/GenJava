@@ -1,0 +1,82 @@
+<svg width="700" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#673AB7"/>
+      <stop offset="100%" style="stop-color:#2196F3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="700" height="400" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#333">genj Architecture Overview</text>
+  
+  <!-- Main class -->
+  <rect x="280" y="50" width="140" height="50" rx="8" fill="#4CAF50" filter="url(#shadow)"/>
+  <text x="350" y="80" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white">Main</text>
+  
+  <!-- Arrow from Main -->
+  <line x1="350" y1="100" x2="350" y2="130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Core Components Row -->
+  <rect x="50" y="140" width="120" height="45" rx="6" fill="#2196F3" filter="url(#shadow)"/>
+  <text x="110" y="167" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">CliParser</text>
+  
+  <rect x="190" y="140" width="120" height="45" rx="6" fill="#2196F3" filter="url(#shadow)"/>
+  <text x="250" y="167" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">CliConfig</text>
+  
+  <rect x="330" y="140" width="120" height="45" rx="6" fill="#FF9800" filter="url(#shadow)"/>
+  <text x="390" y="167" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">TemplateProcessor</text>
+  
+  <rect x="470" y="140" width="120" height="45" rx="6" fill="#FF9800" filter="url(#shadow)"/>
+  <text x="530" y="167" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">TemplateLister</text>
+  
+  <!-- Arrows -->
+  <line x1="170" y1="162" x2="190" y2="162" stroke="#666" stroke-width="1.5"/>
+  <line x1="310" y1="162" x2="330" y2="162" stroke="#666" stroke-width="1.5"/>
+  <line x1="450" y1="162" x2="470" y2="162" stroke="#666" stroke-width="1.5"/>
+  
+  <!-- Utility Components -->
+  <rect x="50" y="220" width="100" height="40" rx="5" fill="#9C27B0" filter="url(#shadow)"/>
+  <text x="100" y="245" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">FileUtils</text>
+  
+  <rect x="170" y="220" width="100" height="40" rx="5" fill="#9C27B0" filter="url(#shadow)"/>
+  <text x="220" y="245" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">Log</text>
+  
+  <rect x="290" y="220" width="100" height="40" rx="5" fill="#E91E63" filter="url(#shadow)"/>
+  <text x="340" y="245" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">GenrcWriter</text>
+  
+  <rect x="410" y="220" width="100" height="40" rx="5" fill="#E91E63" filter="url(#shadow)"/>
+  <text x="460" y="245" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">VscodeGitSetup</text>
+  
+  <!-- External Dependencies -->
+  <rect x="540" y="220" width="100" height="40" rx="5" fill="#607D8B" filter="url(#shadow)"/>
+  <text x="590" y="245" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white">JGit</text>
+  
+  <!-- File System Layer -->
+  <rect x="50" y="300" width="590" height="50" rx="8" fill="#ECEFF1" stroke="#B0BEC5" stroke-width="2"/>
+  <text x="345" y="330" text-anchor="middle" font-family="Arial" font-size="14" fill="#546E7A">File System / Templates</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="370" width="15" height="15" fill="#4CAF50"/>
+  <text x="70" y="382" font-family="Arial" font-size="10" fill="#666">Entry Point</text>
+  
+  <rect x="150" y="370" width="15" height="15" fill="#2196F3"/>
+  <text x="170" y="382" font-family="Arial" font-size="10" fill="#666">CLI</text>
+  
+  <rect x="220" y="370" width="15" height="15" fill="#FF9800"/>
+  <text x="240" y="382" font-family="Arial" font-size="10" fill="#666">Template</text>
+  
+  <rect x="320" y="370" width="15" height="15" fill="#9C27B0"/>
+  <text x="340" y="382" font-family="Arial" font-size="10" fill="#666">Utilities</text>
+  
+  <rect x="410" y="370" width="15" height="15" fill="#E91E63"/>
+  <text x="430" y="382" font-family="Arial" font-size="10" fill="#666">Generators</text>
+  
+  <rect x="520" y="370" width="15" height="15" fill="#607D8B"/>
+  <text x="540" y="382" font-family="Arial" font-size="10" fill="#666">External</text>
+</svg>

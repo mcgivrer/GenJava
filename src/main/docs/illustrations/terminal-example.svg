@@ -1,0 +1,22 @@
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .terminal { font-family: 'Courier New', monospace; font-size: 12px; }
+    .prompt { fill: #4CAF50; }
+    .command { fill: #fff; }
+    .output { fill: #aaa; }
+  </style>
+  <rect x="10" y="10" width="480" height="180" rx="8" fill="#1e1e1e"/>
+  <circle cx="30" cy="25" r="6" fill="#ff5f56"/>
+  <circle cx="50" cy="25" r="6" fill="#ffbd2e"/>
+  <circle cx="70" cy="25" r="6" fill="#27ca40"/>
+  
+  <text x="20" y="55" class="terminal prompt">$</text>
+  <text x="35" y="55" class="terminal command">genj -t java-basic-game -n MyGame -k com.example</text>
+  
+  <text x="20" y="80" class="terminal output">[INFO] Reading template from: java-basic-game</text>
+  <text x="20" y="100" class="terminal output">[INFO] Using build tool: maven</text>
+  <text x="20" y="120" class="terminal" fill="#4CAF50">[✓] pom.xml generated</text>
+  <text x="20" y="140" class="terminal" fill="#4CAF50">[✓] .sdkmanrc generated</text>
+  <text x="20" y="160" class="terminal" fill="#4CAF50">[✓] Git repository initialized</text>
+  <text x="20" y="180" class="terminal" fill="#4CAF50">[✓] Java project 'MyGame' generated successfully</text>
+</svg>
